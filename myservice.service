@@ -1,0 +1,12 @@
+[Unit]
+Description=My Flask Service
+After=network.target
+
+[Service]
+User=yourusername
+WorkingDirectory=/path/to/sample_app
+ExecStart=/usr/bin/python3 app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
